@@ -23,11 +23,13 @@ app.get('/download/*', function (req, res, next) {
         });
         f.pipe(res);
     });
-    
+
 });
 app.get("/",function(req,res){
     res.send("Hello Electron Server")
 })
 
-http.createServer(app).listen(8081);
+http.createServer(app).listen(8081,'www.pansq.local', () => {
+    
+});
 console.log('Server running at http://127.0.0.1:8081/');
