@@ -28,8 +28,11 @@ app.get('/download/*', function (req, res, next) {
 app.get("/",function(req,res){
     res.send("Hello Electron Server")
 })
+var server = app.listen(8081, function () {
 
-http.createServer(app).listen(8081,'www.pansq.local', () => {
-    
-});
-console.log('Server running at http://127.0.0.1:8081/');
+    var host = server.address().address
+    var port = server.address().port
+
+    console.log("应用实例，访问地址为 http://%s:%s", host, port)
+
+})
