@@ -1,0 +1,24 @@
+{
+  "name": "electron_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panshangqi/electron_server.git"
+  },
+  "author": "pansq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panshangqi/electron_server/issues"
+  },
+  "homepage": "https://github.com/panshangqi/electron_server#readme"
+}
