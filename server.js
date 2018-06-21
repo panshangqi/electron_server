@@ -16,9 +16,11 @@ app.get('/download/*', function (req, res, next) {
     var path="./act/" + filename;
 
     var f = fs.createReadStream(path);
+    var state = fs.lstatSync(path);
     f.on('open', function(fd){
         res.writeHead(200, {
             'Content-Type': 'application/force-download',
+            'Content-Length': state.size,
             'Content-Disposition': 'attachment; filename='+filename
         });
         f.pipe(res);
